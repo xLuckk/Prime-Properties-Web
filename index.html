@@ -1,0 +1,930 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Properties - Luxury Real Estate in Austin, Texas</title>
+    <meta name="description" content="Prime Properties offers premium real estate services in Austin, Texas. Find luxury homes, expert agents, and comprehensive property services in the heart of Texas.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700;900&family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">
+                <i class="fas fa-home text-gold me-2"></i>Prime Properties
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#properties">Properties</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#agents">Agents</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#calculator">Calculator</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-8">
+                    <div class="hero-content text-white">
+                        <h1 class="display-2 fw-bold mb-4">Discover Your <span class="text-gold">Dream Home</span></h1>
+                        <h2 class="display-6 mb-4">in Austin, Texas</h2>
+                        <p class="lead mb-5">Prime Properties specializes in luxury real estate throughout Austin's most desirable neighborhoods. From downtown condos to hill country estates, we deliver exceptional service and unparalleled market expertise.</p>
+                        
+                        <!-- Property Search -->
+                        <div class="property-search-widget">
+                            <form class="search-form">
+                                <div class="row g-3">
+                                    <div class="col-lg-3">
+                                        <select class="form-select" id="propertyType">
+                                            <option value="">Property Type</option>
+                                            <option value="house">House</option>
+                                            <option value="condo">Condo</option>
+                                            <option value="townhouse">Townhouse</option>
+                                            <option value="land">Land</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <select class="form-select" id="priceRange">
+                                            <option value="">Price Range</option>
+                                            <option value="0-500000">Under $500K</option>
+                                            <option value="500000-1000000">$500K - $1M</option>
+                                            <option value="1000000-2000000">$1M - $2M</option>
+                                            <option value="2000000+">$2M+</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <select class="form-select" id="bedrooms">
+                                            <option value="">Bedrooms</option>
+                                            <option value="1">1+ Bed</option>
+                                            <option value="2">2+ Beds</option>
+                                            <option value="3">3+ Beds</option>
+                                            <option value="4">4+ Beds</option>
+                                            <option value="5">5+ Beds</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <button type="button" class="btn btn-gold w-100" id="searchProperties">
+                                            <i class="fas fa-search me-2"></i>Search
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <div class="hero-stats row mt-5">
+                            <div class="col-lg-3 col-6 mb-3">
+                                <div class="stat-card">
+                                    <h3 class="text-gold fw-bold" data-count="1250">0</h3>
+                                    <p class="mb-0">Properties Sold</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-6 mb-3">
+                                <div class="stat-card">
+                                    <h3 class="text-gold fw-bold" data-count="500">0</h3>
+                                    <p class="mb-0">Million in Sales</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-6 mb-3">
+                                <div class="stat-card">
+                                    <h3 class="text-gold fw-bold" data-count="15">0</h3>
+                                    <p class="mb-0">Years Experience</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-6 mb-3">
+                                <div class="stat-card">
+                                    <h3 class="text-gold fw-bold" data-count="98">0</h3>
+                                    <p class="mb-0">% Satisfaction</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Properties Section -->
+    <section id="properties" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title">Featured Properties</h2>
+                    <p class="text-muted mb-5">Discover exceptional homes in Austin's most sought-after neighborhoods</p>
+                </div>
+            </div>
+            
+            <!-- Property Filter -->
+            <div class="property-filter text-center mb-5">
+                <button class="btn btn-filter active" data-filter="all">All Properties</button>
+                <button class="btn btn-filter" data-filter="luxury">Luxury Homes</button>
+                <button class="btn btn-filter" data-filter="condos">Condos</button>
+                <button class="btn btn-filter" data-filter="new-construction">New Construction</button>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 property-item" data-category="luxury">
+                    <div class="property-card card h-100">
+                        <div class="property-image">
+                            <img src="https://media.architecturaldigest.com/photos/589b40e77713e23d62084afa/4:3/w_2964,h_2223,c_limit/0213-AD-LAKE-13.jpg" class="card-img-top" alt="Lake Austin Estate">
+                            <div class="property-badge luxury">Luxury</div>
+                            <div class="property-overlay">
+                                <button class="btn btn-light btn-sm">
+                                    <i class="fas fa-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="property-price">$4,750,000</div>
+                            <h5 class="card-title">Stunning Lake Austin Estate</h5>
+                            <p class="property-address">
+                                <i class="fas fa-map-marker-alt text-gold me-2"></i>
+                                Lake Austin, TX 78734
+                            </p>
+                            <div class="property-details row text-center">
+                                <div class="col-4">
+                                    <i class="fas fa-bed text-navy"></i>
+                                    <span class="d-block">5 Beds</span>
+                                </div>
+                                <div class="col-4">
+                                    <i class="fas fa-bath text-navy"></i>
+                                    <span class="d-block">6 Baths</span>
+                                </div>
+                                <div class="col-4">
+                                    <i class="fas fa-ruler-combined text-navy"></i>
+                                    <span class="d-block">6,200 sq ft</span>
+                                </div>
+                            </div>
+                            <p class="property-description">Magnificent waterfront estate with panoramic lake views, infinity pool, and private dock. Recently renovated with premium finishes throughout.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Listed 3 days ago</small>
+                                <div class="property-actions">
+                                    <button class="btn btn-outline-navy btn-sm me-2">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                    <button class="btn btn-gold btn-sm">Contact Agent</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 property-item" data-category="condos">
+                    <div class="property-card card h-100">
+                        <div class="property-image">
+                            <img src="https://images2.dwell.com/photos/6308457958906204160/7087220973747109888/original.jpg" class="card-img-top" alt="Downtown Austin Condo">
+                            <div class="property-badge new">New Listing</div>
+                            <div class="property-overlay">
+                                <button class="btn btn-light btn-sm">
+                                    <i class="fas fa-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="property-price">$1,200,000</div>
+                            <h5 class="card-title">Modern Downtown High-Rise</h5>
+                            <p class="property-address">
+                                <i class="fas fa-map-marker-alt text-gold me-2"></i>
+                                Downtown Austin, TX 78701
+                            </p>
+                            <div class="property-details row text-center">
+                                <div class="col-4">
+                                    <i class="fas fa-bed text-navy"></i>
+                                    <span class="d-block">2 Beds</span>
+                                </div>
+                                <div class="col-4">
+                                    <i class="fas fa-bath text-navy"></i>
+                                    <span class="d-block">2 Baths</span>
+                                </div>
+                                <div class="col-4">
+                                    <i class="fas fa-ruler-combined text-navy"></i>
+                                    <span class="d-block">1,800 sq ft</span>
+                                </div>
+                            </div>
+                            <p class="property-description">Luxury corner unit with floor-to-ceiling windows and city views. Premium amenities include rooftop pool, fitness center, and concierge service.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Listed today</small>
+                                <div class="property-actions">
+                                    <button class="btn btn-outline-navy btn-sm me-2">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                    <button class="btn btn-gold btn-sm">Contact Agent</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 property-item" data-category="new-construction">
+                    <div class="property-card card h-100">
+                        <div class="property-image">
+                            <img src="https://images2.dwell.com/photos/6242537032151076864/6502418792786141184/original.jpg" class="card-img-top" alt="New Construction Home">
+                            <div class="property-badge new-construction">New Construction</div>
+                            <div class="property-overlay">
+                                <button class="btn btn-light btn-sm">
+                                    <i class="fas fa-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="property-price">$850,000</div>
+                            <h5 class="card-title">Contemporary Family Home</h5>
+                            <p class="property-address">
+                                <i class="fas fa-map-marker-alt text-gold me-2"></i>
+                                Cedar Park, TX 78613
+                            </p>
+                            <div class="property-details row text-center">
+                                <div class="col-4">
+                                    <i class="fas fa-bed text-navy"></i>
+                                    <span class="d-block">4 Beds</span>
+                                </div>
+                                <div class="col-4">
+                                    <i class="fas fa-bath text-navy"></i>
+                                    <span class="d-block">3 Baths</span>
+                                </div>
+                                <div class="col-4">
+                                    <i class="fas fa-ruler-combined text-navy"></i>
+                                    <span class="d-block">3,200 sq ft</span>
+                                </div>
+                            </div>
+                            <p class="property-description">Brand new contemporary home with open floor plan, gourmet kitchen, and spacious master suite. Energy-efficient features throughout.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Completion in 60 days</small>
+                                <div class="property-actions">
+                                    <button class="btn btn-outline-navy btn-sm me-2">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                    <button class="btn btn-gold btn-sm">Contact Agent</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 property-item" data-category="luxury">
+                    <div class="property-card card h-100">
+                        <div class="property-image">
+                            <img src="https://www.austinrealestatehomesblog.com/wp-content/uploads/2023/04/neighborhood-street-in-hunters-chase-austin.jpg" class="card-img-top" alt="Hill Country Estate">
+                            <div class="property-badge luxury">Luxury</div>
+                            <div class="property-overlay">
+                                <button class="btn btn-light btn-sm">
+                                    <i class="fas fa-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="property-price">$2,200,000</div>
+                            <h5 class="card-title">Hill Country Retreat</h5>
+                            <p class="property-address">
+                                <i class="fas fa-map-marker-alt text-gold me-2"></i>
+                                Westlake Hills, TX 78746
+                            </p>
+                            <div class="property-details row text-center">
+                                <div class="col-4">
+                                    <i class="fas fa-bed text-navy"></i>
+                                    <span class="d-block">4 Beds</span>
+                                </div>
+                                <div class="col-4">
+                                    <i class="fas fa-bath text-navy"></i>
+                                    <span class="d-block">4 Baths</span>
+                                </div>
+                                <div class="col-4">
+                                    <i class="fas fa-ruler-combined text-navy"></i>
+                                    <span class="d-block">4,500 sq ft</span>
+                                </div>
+                            </div>
+                            <p class="property-description">Exquisite hill country home with stunning Austin skyline views. Features include wine cellar, home theater, and resort-style backyard.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Listed 1 week ago</small>
+                                <div class="property-actions">
+                                    <button class="btn btn-outline-navy btn-sm me-2">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                    <button class="btn btn-gold btn-sm">Contact Agent</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 property-item" data-category="condos">
+                    <div class="property-card card h-100">
+                        <div class="property-image">
+                            <img src="https://www.austinrealestatehomesblog.com/wp-content/uploads/2023/03/ranch-at-cypress-mill-white-farmhouse-in-cedar-park-78613.jpg" class="card-img-top" alt="Modern Farmhouse">
+                            <div class="property-badge featured">Featured</div>
+                            <div class="property-overlay">
+                                <button class="btn btn-light btn-sm">
+                                    <i class="fas fa-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="property-price">$975,000</div>
+                            <h5 class="card-title">Modern Farmhouse Style</h5>
+                            <p class="property-address">
+                                <i class="fas fa-map-marker-alt text-gold me-2"></i>
+                                Cedar Park, TX 78613
+                            </p>
+                            <div class="property-details row text-center">
+                                <div class="col-4">
+                                    <i class="fas fa-bed text-navy"></i>
+                                    <span class="d-block">3 Beds</span>
+                                </div>
+                                <div class="col-4">
+                                    <i class="fas fa-bath text-navy"></i>
+                                    <span class="d-block">2.5 Baths</span>
+                                </div>
+                                <div class="col-4">
+                                    <i class="fas fa-ruler-combined text-navy"></i>
+                                    <span class="d-block">2,800 sq ft</span>
+                                </div>
+                            </div>
+                            <p class="property-description">Beautiful modern farmhouse with shiplap details, barn doors, and chef's kitchen. Large covered patio perfect for entertaining.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Listed 5 days ago</small>
+                                <div class="property-actions">
+                                    <button class="btn btn-outline-navy btn-sm me-2">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                    <button class="btn btn-gold btn-sm">Contact Agent</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 property-item" data-category="luxury">
+                    <div class="property-card card h-100">
+                        <div class="property-image">
+                            <img src="https://www.austinrealestatehomesblog.com/wp-content/uploads/2023/03/summit-at-west-rim-on-mt-larson-entry-gate-austin-texas-78746.jpg" class="card-img-top" alt="Gated Community Home">
+                            <div class="property-badge exclusive">Exclusive</div>
+                            <div class="property-overlay">
+                                <button class="btn btn-light btn-sm">
+                                    <i class="fas fa-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="property-price">$3,100,000</div>
+                            <h5 class="card-title">Gated Community Estate</h5>
+                            <p class="property-address">
+                                <i class="fas fa-map-marker-alt text-gold me-2"></i>
+                                West Austin, TX 78746
+                            </p>
+                            <div class="property-details row text-center">
+                                <div class="col-4">
+                                    <i class="fas fa-bed text-navy"></i>
+                                    <span class="d-block">5 Beds</span>
+                                </div>
+                                <div class="col-4">
+                                    <i class="fas fa-bath text-navy"></i>
+                                    <span class="d-block">5.5 Baths</span>
+                                </div>
+                                <div class="col-4">
+                                    <i class="fas fa-ruler-combined text-navy"></i>
+                                    <span class="d-block">5,800 sq ft</span>
+                                </div>
+                            </div>
+                            <p class="property-description">Prestigious gated community home with golf course views, infinity pool, and guest house. Premium location with 24/7 security.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Listed 2 weeks ago</small>
+                                <div class="property-actions">
+                                    <button class="btn btn-outline-navy btn-sm me-2">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                    <button class="btn btn-gold btn-sm">Contact Agent</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <button class="btn btn-outline-navy btn-lg">
+                    <i class="fas fa-plus me-2"></i>View All Properties
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agents Section -->
+    <section id="agents" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title">Meet Our Expert Agents</h2>
+                    <p class="text-muted mb-5">Our experienced real estate professionals are here to guide you through your property journey</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="agent-card card h-100">
+                        <div class="card-body text-center">
+                            <div class="agent-avatar mb-4">
+                                <div class="agent-photo">
+                                    <i class="fas fa-user-tie fa-4x text-navy"></i>
+                                </div>
+                                <div class="agent-contact-overlay">
+                                    <button class="btn btn-gold btn-sm">Contact</button>
+                                </div>
+                            </div>
+                            <h5 class="card-title">Sarah Williams</h5>
+                            <p class="agent-title text-gold">Senior Real Estate Advisor</p>
+                            <div class="agent-stats row mb-3">
+                                <div class="col-6">
+                                    <strong class="text-navy">150+</strong>
+                                    <small class="d-block text-muted">Properties Sold</small>
+                                </div>
+                                <div class="col-6">
+                                    <strong class="text-navy">12 Years</strong>
+                                    <small class="d-block text-muted">Experience</small>
+                                </div>
+                            </div>
+                            <p class="card-text">Specializing in luxury homes and waterfront properties throughout Austin. Known for exceptional client service and market expertise.</p>
+                            <div class="agent-specialties">
+                                <span class="badge bg-light text-dark me-1">Luxury Homes</span>
+                                <span class="badge bg-light text-dark me-1">Waterfront</span>
+                                <span class="badge bg-light text-dark">Investment</span>
+                            </div>
+                            <div class="agent-contact mt-3">
+                                <div class="d-flex justify-content-center">
+                                    <a href="tel:+15125550123" class="btn btn-outline-navy btn-sm me-2">
+                                        <i class="fas fa-phone"></i>
+                                    </a>
+                                    <a href="mailto:sarah@primeproperties.com" class="btn btn-outline-navy btn-sm">
+                                        <i class="fas fa-envelope"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="agent-card card h-100">
+                        <div class="card-body text-center">
+                            <div class="agent-avatar mb-4">
+                                <div class="agent-photo">
+                                    <i class="fas fa-user-tie fa-4x text-navy"></i>
+                                </div>
+                                <div class="agent-contact-overlay">
+                                    <button class="btn btn-gold btn-sm">Contact</button>
+                                </div>
+                            </div>
+                            <h5 class="card-title">Michael Rodriguez</h5>
+                            <p class="agent-title text-gold">Commercial & Residential Specialist</p>
+                            <div class="agent-stats row mb-3">
+                                <div class="col-6">
+                                    <strong class="text-navy">200+</strong>
+                                    <small class="d-block text-muted">Properties Sold</small>
+                                </div>
+                                <div class="col-6">
+                                    <strong class="text-navy">8 Years</strong>
+                                    <small class="d-block text-muted">Experience</small>
+                                </div>
+                            </div>
+                            <p class="card-text">Expert in both residential and commercial properties. Fluent in English and Spanish, serving diverse Austin communities with dedication.</p>
+                            <div class="agent-specialties">
+                                <span class="badge bg-light text-dark me-1">Commercial</span>
+                                <span class="badge bg-light text-dark me-1">New Construction</span>
+                                <span class="badge bg-light text-dark">Bilingual</span>
+                            </div>
+                            <div class="agent-contact mt-3">
+                                <div class="d-flex justify-content-center">
+                                    <a href="tel:+15125550124" class="btn btn-outline-navy btn-sm me-2">
+                                        <i class="fas fa-phone"></i>
+                                    </a>
+                                    <a href="mailto:michael@primeproperties.com" class="btn btn-outline-navy btn-sm">
+                                        <i class="fas fa-envelope"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="agent-card card h-100">
+                        <div class="card-body text-center">
+                            <div class="agent-avatar mb-4">
+                                <div class="agent-photo">
+                                    <i class="fas fa-user-tie fa-4x text-navy"></i>
+                                </div>
+                                <div class="agent-contact-overlay">
+                                    <button class="btn btn-gold btn-sm">Contact</button>
+                                </div>
+                            </div>
+                            <h5 class="card-title">Emily Chen</h5>
+                            <p class="agent-title text-gold">First-Time Buyer Specialist</p>
+                            <div class="agent-stats row mb-3">
+                                <div class="col-6">
+                                    <strong class="text-navy">95+</strong>
+                                    <small class="d-block text-muted">Properties Sold</small>
+                                </div>
+                                <div class="col-6">
+                                    <strong class="text-navy">5 Years</strong>
+                                    <small class="d-block text-muted">Experience</small>
+                                </div>
+                            </div>
+                            <p class="card-text">Passionate about helping first-time buyers navigate the real estate process. Patient, knowledgeable, and committed to finding the perfect home.</p>
+                            <div class="agent-specialties">
+                                <span class="badge bg-light text-dark me-1">First-Time Buyers</span>
+                                <span class="badge bg-light text-dark me-1">Condos</span>
+                                <span class="badge bg-light text-dark">Young Professionals</span>
+                            </div>
+                            <div class="agent-contact mt-3">
+                                <div class="d-flex justify-content-center">
+                                    <a href="tel:+15125550125" class="btn btn-outline-navy btn-sm me-2">
+                                        <i class="fas fa-phone"></i>
+                                    </a>
+                                    <a href="mailto:emily@primeproperties.com" class="btn btn-outline-navy btn-sm">
+                                        <i class="fas fa-envelope"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section id="calculator" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title">Mortgage Calculator</h2>
+                    <p class="text-muted mb-5">Calculate your estimated monthly mortgage payments</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card shadow">
+                        <div class="card-body p-4">
+                            <h5 class="card-title mb-4">
+                                <i class="fas fa-calculator text-gold me-2"></i>Loan Calculator
+                            </h5>
+                            <form id="mortgageCalculator">
+                                <div class="mb-3">
+                                    <label for="homePrice" class="form-label">Home Price</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">$</span>
+                                        <input type="number" class="form-control" id="homePrice" value="500000" min="1" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="downPayment" class="form-label">Down Payment</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">$</span>
+                                        <input type="number" class="form-control" id="downPayment" value="100000" min="0" required>
+                                    </div>
+                                    <div class="form-text">
+                                        <span id="downPaymentPercent">20%</span> of home price
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="interestRate" class="form-label">Interest Rate</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="interestRate" value="7.0" step="0.1" min="0" max="15" required>
+                                        <span class="input-group-text">%</span>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="loanTerm" class="form-label">Loan Term</label>
+                                    <select class="form-select" id="loanTerm" required>
+                                        <option value="15">15 years</option>
+                                        <option value="20">20 years</option>
+                                        <option value="25">25 years</option>
+                                        <option value="30" selected>30 years</option>
+                                    </select>
+                                </div>
+                                <button type="button" class="btn btn-gold w-100" onclick="calculateMortgage()">
+                                    <i class="fas fa-calculator me-2"></i>Calculate Payment
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card shadow">
+                        <div class="card-body p-4">
+                            <h5 class="card-title mb-4">
+                                <i class="fas fa-chart-pie text-gold me-2"></i>Payment Breakdown
+                            </h5>
+                            <div id="calculatorResults">
+                                <div class="result-item">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <span>Monthly Principal & Interest</span>
+                                        <strong id="monthlyPayment" class="text-navy">$2,661</strong>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <span>Loan Amount</span>
+                                        <strong id="loanAmount">$400,000</strong>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <span>Total Interest Paid</span>
+                                        <strong id="totalInterest">$558,000</strong>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center mb-4">
+                                        <span>Total Amount Paid</span>
+                                        <strong id="totalAmount" class="text-gold">$958,000</strong>
+                                    </div>
+                                    
+                                    <hr>
+                                    
+                                    <h6 class="mb-3">Additional Monthly Costs (Estimated)</h6>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <small class="text-muted">Property Tax</small>
+                                        <small id="propertyTax">$625</small>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <small class="text-muted">Homeowner's Insurance</small>
+                                        <small id="insurance">$208</small>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <small class="text-muted">PMI (if applicable)</small>
+                                        <small id="pmi">$0</small>
+                                    </div>
+                                    <div class="d-flex justify-content-between border-top pt-2">
+                                        <strong>Total Monthly Payment</strong>
+                                        <strong id="totalMonthly" class="text-gold">$3,494</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-navy text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4">
+                    <h2 class="section-title text-white">About Prime Properties</h2>
+                    <p class="mb-4">For over 15 years, Prime Properties has been Austin's premier real estate agency, connecting buyers and sellers with exceptional properties throughout Central Texas. Our commitment to excellence, market knowledge, and personalized service has made us the trusted choice for luxury real estate.</p>
+                    
+                    <div class="row mb-4">
+                        <div class="col-6">
+                            <div class="about-stat text-center">
+                                <h3 class="text-gold fw-bold" data-count="1250">0</h3>
+                                <p class="mb-0">Properties Sold</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="about-stat text-center">
+                                <h3 class="text-gold fw-bold" data-count="500">0</h3>
+                                <p class="mb-0">Million in Sales</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-features">
+                        <div class="feature-item mb-3">
+                            <i class="fas fa-award text-gold me-3"></i>
+                            <span>Award-winning real estate team</span>
+                        </div>
+                        <div class="feature-item mb-3">
+                            <i class="fas fa-handshake text-gold me-3"></i>
+                            <span>Personalized service for every client</span>
+                        </div>
+                        <div class="feature-item mb-3">
+                            <i class="fas fa-chart-line text-gold me-3"></i>
+                            <span>Expert market analysis and pricing</span>
+                        </div>
+                        <div class="feature-item mb-3">
+                            <i class="fas fa-home text-gold me-3"></i>
+                            <span>Luxury and investment property specialists</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-image">
+                        <img src="https://wallpaperswide.com/download/austin_skyline-wallpaper-2880x1620.jpg" alt="Austin Skyline" class="img-fluid rounded shadow">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title">Contact Prime Properties</h2>
+                    <p class="text-muted mb-5">Ready to find your dream home or sell your property? Let's start the conversation</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="contact-info">
+                        <h4 class="mb-4">Get in Touch</h4>
+                        <div class="contact-item mb-3">
+                            <i class="fas fa-map-marker-alt text-gold me-3"></i>
+                            <span>2500 South Congress Avenue<br>Austin, TX 78704</span>
+                        </div>
+                        <div class="contact-item mb-3">
+                            <i class="fas fa-phone text-gold me-3"></i>
+                            <span>(512) 555-0199</span>
+                        </div>
+                        <div class="contact-item mb-3">
+                            <i class="fas fa-envelope text-gold me-3"></i>
+                            <span>info@primepropertiesaustin.com</span>
+                        </div>
+                        
+                        <h5 class="mb-3 mt-4">Office Hours</h5>
+                        <div class="office-hours">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Monday - Friday</span>
+                                <span class="text-gold">8:00 AM - 7:00 PM</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Saturday</span>
+                                <span class="text-gold">9:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Sunday</span>
+                                <span class="text-gold">12:00 PM - 5:00 PM</span>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links mt-4">
+                            <a href="#" class="text-navy me-3"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-navy me-3"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-navy me-3"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="text-navy"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <form id="contactForm">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="contactFirstName" class="form-label">First Name</label>
+                                        <input type="text" class="form-control" id="contactFirstName" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="contactLastName" class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" id="contactLastName" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="contactEmail" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="contactEmail" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="contactPhone" class="form-label">Phone</label>
+                                        <input type="tel" class="form-control" id="contactPhone" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="inquiryType" class="form-label">I'm Interested In</label>
+                                    <select class="form-select" id="inquiryType" required>
+                                        <option value="">Select your interest</option>
+                                        <option value="buying">Buying a Home</option>
+                                        <option value="selling">Selling a Property</option>
+                                        <option value="renting">Rental Properties</option>
+                                        <option value="investment">Investment Opportunities</option>
+                                        <option value="market-analysis">Market Analysis</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="priceRangeContact" class="form-label">Price Range (Optional)</label>
+                                        <select class="form-select" id="priceRangeContact">
+                                            <option value="">Select range</option>
+                                            <option value="0-300000">Under $300K</option>
+                                            <option value="300000-500000">$300K - $500K</option>
+                                            <option value="500000-750000">$500K - $750K</option>
+                                            <option value="750000-1000000">$750K - $1M</option>
+                                            <option value="1000000-2000000">$1M - $2M</option>
+                                            <option value="2000000+">$2M+</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="timeframe" class="form-label">Timeframe</label>
+                                        <select class="form-select" id="timeframe">
+                                            <option value="">Select timeframe</option>
+                                            <option value="immediately">Ready now</option>
+                                            <option value="1-3months">1-3 months</option>
+                                            <option value="3-6months">3-6 months</option>
+                                            <option value="6-12months">6-12 months</option>
+                                            <option value="just-looking">Just exploring</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="contactMessage" class="form-label">Message</label>
+                                    <textarea class="form-control" id="contactMessage" rows="4" placeholder="Tell us about your real estate needs..." required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-gold w-100">
+                                    <i class="fas fa-paper-plane me-2"></i>Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="text-gold mb-3">
+                        <i class="fas fa-home me-2"></i>Prime Properties
+                    </h5>
+                    <p>Austin's premier real estate agency specializing in luxury homes, investment properties, and personalized service since 2009.</p>
+                    <div class="certifications">
+                        <span class="badge bg-gold text-dark me-2">NAR Member</span>
+                        <span class="badge bg-secondary me-2">MLS Certified</span>
+                        <span class="badge bg-success">BBB A+ Rating</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5 class="mb-3">Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#properties" class="text-white-50">Buy a Home</a></li>
+                        <li><a href="#agents" class="text-white-50">Sell Your Property</a></li>
+                        <li><a href="#calculator" class="text-white-50">Mortgage Calculator</a></li>
+                        <li><a href="#" class="text-white-50">Property Management</a></li>
+                        <li><a href="#" class="text-white-50">Investment Properties</a></li>
+                        <li><a href="#" class="text-white-50">Market Analysis</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5 class="mb-3">Contact Info</h5>
+                    <p class="text-white-50 mb-1">2500 South Congress Avenue</p>
+                    <p class="text-white-50 mb-1">Austin, TX 78704</p>
+                    <p class="text-white-50 mb-1">(512) 555-0199</p>
+                    <p class="text-white-50 mb-3">info@primepropertiesaustin.com</p>
+                    
+                    <div class="newsletter">
+                        <h6 class="text-gold">Market Updates</h6>
+                        <small class="text-white-50">Get the latest Austin real estate market insights delivered to your inbox.</small>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 text-white-50">&copy; 2024 Prime Properties. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white-50 me-3">Privacy Policy</a>
+                    <a href="#" class="text-white-50 me-3">Terms of Service</a>
+                    <a href="#" class="text-white-50">Fair Housing</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>

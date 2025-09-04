@@ -1,0 +1,841 @@
+
+/* Prime Properties Real Estate Styles */
+
+:root {
+    --gold: #d4af37;
+    --dark-gold: #b8941f;
+    --light-gold: #e6c961;
+    --navy: #1e3a8a;
+    --dark-navy: #1e40af;
+    --light-navy: #3b82f6;
+    --cream: #fdf6e3;
+    --gray: #6b7280;
+    --dark-gray: #374151;
+    --light-gray: #f8fafc;
+    --white: #ffffff;
+    --success: #10b981;
+    --warning: #f59e0b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Utilities */
+.text-gold {
+    color: var(--gold) !important;
+}
+
+.text-navy {
+    color: var(--navy) !important;
+}
+
+.bg-gold {
+    background-color: var(--gold) !important;
+}
+
+.bg-navy {
+    background-color: var(--navy) !important;
+}
+
+.btn-gold {
+    background-color: var(--gold);
+    border-color: var(--gold);
+    color: white;
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-gold:hover {
+    background-color: var(--dark-gold);
+    border-color: var(--dark-gold);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+}
+
+.btn-outline-navy {
+    border: 2px solid var(--navy);
+    color: var(--navy);
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-navy:hover {
+    background-color: var(--navy);
+    border-color: var(--navy);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--dark-gray);
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--gold), var(--dark-gold));
+    margin: 20px auto;
+}
+
+.section-title.text-white::after {
+    margin: 20px auto;
+}
+
+/* Navigation */
+.navbar {
+    background: rgba(255, 255, 255, 0.96) !important;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    color: var(--dark-gray) !important;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--dark-gray) !important;
+    margin: 0 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.95rem;
+}
+
+.nav-link:hover {
+    color: var(--gold) !important;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    background: linear-gradient(rgba(30, 58, 138, 0.8), rgba(30, 64, 175, 0.6)), url('https://wallpaperswide.com/download/austin_skyline-wallpaper-2880x1620.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.9), rgba(212, 175, 55, 0.3));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.property-search-widget {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    margin: 40px 0;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.search-form .form-select {
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-weight: 500;
+    color: var(--dark-gray);
+}
+
+.hero-stats {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.stat-card {
+    text-align: center;
+    color: white;
+}
+
+.stat-card h3 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Property Cards */
+.property-item {
+    transition: all 0.5s ease;
+}
+
+.property-item.hide {
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+}
+
+.property-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.property-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.property-image {
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+}
+
+.property-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.property-card:hover .property-image img {
+    transform: scale(1.1);
+}
+
+.property-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 5;
+}
+
+.property-badge.luxury {
+    background: var(--gold);
+    color: white;
+}
+
+.property-badge.new {
+    background: var(--success);
+    color: white;
+}
+
+.property-badge.new-construction {
+    background: var(--warning);
+    color: white;
+}
+
+.property-badge.featured {
+    background: var(--navy);
+    color: white;
+}
+
+.property-badge.exclusive {
+    background: linear-gradient(135deg, var(--gold), var(--dark-gold));
+    color: white;
+}
+
+.property-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(30, 58, 138, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.property-card:hover .property-overlay {
+    opacity: 1;
+}
+
+.property-price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--gold);
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+}
+
+.property-address {
+    color: var(--gray);
+    margin-bottom: 15px;
+}
+
+.property-details {
+    margin: 20px 0;
+    padding: 15px 0;
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.property-details i {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.property-description {
+    color: var(--gray);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.property-actions .btn {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+}
+
+/* Property Filter */
+.property-filter {
+    margin-bottom: 3rem;
+}
+
+.btn-filter {
+    background: transparent;
+    border: 2px solid var(--navy);
+    color: var(--navy);
+    margin: 0 8px 10px;
+    padding: 8px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+}
+
+.btn-filter:hover,
+.btn-filter.active {
+    background: var(--navy);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Agent Cards */
+.agent-card {
+    border: none;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.agent-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+}
+
+.agent-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--gold), var(--navy));
+}
+
+.agent-avatar {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+}
+
+.agent-photo {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--navy), var(--light-navy));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.agent-card:hover .agent-photo {
+    transform: scale(1.05);
+}
+
+.agent-contact-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.agent-card:hover .agent-contact-overlay {
+    opacity: 1;
+}
+
+.agent-title {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.agent-stats {
+    margin: 15px 0;
+    padding: 15px 0;
+    background: var(--light-gray);
+    border-radius: 10px;
+}
+
+.agent-specialties {
+    margin: 15px 0;
+}
+
+.agent-specialties .badge {
+    margin: 2px;
+    padding: 6px 12px;
+    border: 1px solid #dee2e6;
+}
+
+/* Calculator */
+.form-control,
+.form-select {
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.25);
+}
+
+.result-item {
+    background: var(--light-gray);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.result-item .d-flex {
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.result-item .d-flex:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* About Section */
+.about-stat {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.about-stat h3 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+.about-image img {
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Contact */
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.contact-item i {
+    width: 25px;
+    margin-top: 2px;
+}
+
+.office-hours div {
+    padding: 8px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.office-hours div:last-child {
+    border-bottom: none;
+}
+
+.social-links a {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border: 2px solid var(--navy);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.social-links a:hover {
+    background: var(--navy);
+    color: white !important;
+    transform: translateY(-3px) scale(1.1);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, var(--dark-gray), #1f2937) !important;
+}
+
+footer h5 {
+    color: var(--gold) !important;
+    font-family: 'Playfair Display', serif;
+}
+
+footer a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--gold) !important;
+}
+
+.certifications {
+    margin-top: 20px;
+}
+
+.certifications .badge {
+    margin-bottom: 5px;
+    margin-right: 5px;
+    padding: 8px 12px;
+}
+
+.newsletter {
+    background: rgba(212, 175, 55, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Success Messages */
+.alert-success {
+    background-color: rgba(212, 175, 55, 0.1);
+    border-color: var(--gold);
+    color: var(--dark-gray);
+    border-radius: 15px;
+}
+
+/* Luxury Effects */
+.luxury-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.luxury-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+    transform: rotate(45deg);
+    transition: all 0.6s ease;
+    opacity: 0;
+}
+
+.luxury-card:hover::before {
+    left: 100%;
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 90vh;
+        background-attachment: scroll;
+        text-align: center;
+    }
+    
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .nav-link {
+        margin: 0 10px;
+        font-size: 0.9rem;
+    }
+    
+    .property-search-widget {
+        margin: 30px 0;
+        padding: 20px;
+    }
+    
+    .hero-stats {
+        margin: 20px 0;
+        padding: 20px;
+    }
+    
+    .stat-card h3 {
+        font-size: 2rem;
+    }
+    
+    .property-image {
+        height: 200px;
+    }
+    
+    .property-price {
+        font-size: 1.5rem;
+    }
+    
+    .agent-avatar {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .social-links a {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+    
+    .property-filter .btn-filter {
+        margin: 0 3px 8px;
+        padding: 6px 15px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .btn-gold,
+    .btn-outline-navy {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .property-search-widget {
+        padding: 15px;
+    }
+    
+    .hero-stats {
+        padding: 15px;
+    }
+    
+    .stat-card h3 {
+        font-size: 1.8rem;
+    }
+    
+    .property-price {
+        font-size: 1.3rem;
+    }
+}
+
+/* Professional Real Estate Theme */
+.premium-gradient {
+    background: linear-gradient(135deg, var(--gold), var(--navy));
+}
+
+.elegant-border {
+    border: 2px solid var(--gold);
+    border-radius: 10px;
+}
+
+.sophisticated-shadow {
+    box-shadow: 0 10px 40px rgba(212, 175, 55, 0.15);
+}
+
+/* Loading Animation */
+.loading {
+    position: relative;
+    pointer-events: none;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    margin: -12px 0 0 -12px;
+    border: 3px solid var(--gold);
+    border-top: 3px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--light-gray);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(var(--gold), var(--navy));
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(var(--navy), var(--gold));
+}
+
+/* High-end finish touches */
+.gold-accent {
+    border-left: 4px solid var(--gold);
+    padding-left: 20px;
+}
+
+.navy-accent {
+    border-left: 4px solid var(--navy);
+    padding-left: 20px;
+}
+
+/* Professional spacing */
+.property-card .card-body {
+    padding: 25px;
+}
+
+.agent-card .card-body {
+    padding: 30px 25px;
+}
+
+/* Hover states for interactive elements */
+.interactive-element {
+    transition: all 0.3s ease;
+}
+
+.interactive-element:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
